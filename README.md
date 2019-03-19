@@ -1,5 +1,6 @@
 # img2txt
-Converts an image to an ascii art text
+Converts an image to an ascii art text. This code was created for my image processing classes. That's why 
+grayscale conversion and shrinking are manually implemented.
 
 Uses two different processes:
 
@@ -17,3 +18,4 @@ Uses two different processes:
 
 
 See [toText1.txt](https://github.com/ViniGodoy/img2txt/blob/master/toText1.txt) and [toText2.txt](https://github.com/ViniGodoy/img2txt/blob/master/toText2.txt) for results after processing [images/jobs.jpg](https://github.com/ViniGodoy/img2txt/blob/master/images/jobs.jpg)
+
