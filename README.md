@@ -15,3 +15,5 @@ Uses two different processes:
 1. Analyze the shape of a 2x2 pixel slot
 1. Map to the closest letter format
 
+
+See [toText1.txt](https://github.com/ViniGodoy/img2txt/blob/master/toText1.txt) and [toText2.txt](https://github.com/ViniGodoy/img2txt/blob/master/toText2.txt) for results after processing [images/jobs.jpg](https://github.com/ViniGodoy/img2txt/blob/master/images/jobs.jpg)

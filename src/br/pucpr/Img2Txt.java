@@ -2,7 +2,6 @@ package br.pucpr;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,8 +62,8 @@ public class Img2Txt {
         // d. Map them to the character pallete
         makePalette(GRAY_PALLETE);
 
-        img = img.shrink(2, 4).save("1.png")
-           .dither(values).save("2.png");
+        img = img.shrink(2, 4)
+           .dither(values);
 
         try (PrintWriter out = new PrintWriter("toText1.txt")) {
             for (int y = 0; y < img.getHeight(); y++) {
@@ -130,9 +129,11 @@ public class Img2Txt {
 
     public static void main(String[] args) throws Exception {
         Img2Txt app = new Img2Txt();
-        String name = args.length == 0 ? "images/avatar" : args[0];
+        String name = args.length == 0 ? "images/jobs.jpg" : args[0];
 
-        GrayImage img = GrayImage.load(name).save("0.png");
+        //Calls reverse() for white background generation (e.g. github or notepad)
+        //Remove reverse() for black background (e.g. terminal or intellij darcula theme)
+        GrayImage img = GrayImage.load(name).reverse();
         app.toText1(img);
         app.toText2(img);
     }
